@@ -1,0 +1,9 @@
+{
+  "name": "BaseConnect PWA",
+  "description": "A modern Progressive Web App for user authentication and profile management using Supabase.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "theme_color": "#D22B2B",
+  "background_color": "#D22B2B"
+}
