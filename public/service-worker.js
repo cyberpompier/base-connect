@@ -2,13 +2,16 @@ const CACHE_NAME = 'baseconnect-v1';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
-  '/public/manifest.json'
+  '/manifest.json',
+  '/icon-192.png',
+  '/icon-512.png'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => cache.addAll(ASSETS_TO_CACHE))
+      .catch(err => console.error("Service Worker: cache.addAll failed", err))
   );
 });
 
